@@ -26,16 +26,16 @@ Arduino_GFX *gfx = new Arduino_SH8601(bus, -1 /* RST */,
 
 void draw()
 {
-sprite1.fillSprite(TFT_BLACK);
-//sprite2.fillSprite(TFT_GREEN);
-sprite1.drawString("Hello World",20,20,4);
-sprite1.fillRect(10,100,60,60,TFT_RED);
-sprite1.fillRect(80,100,60,60,TFT_GREEN);
-sprite1.fillRect(150,100,60,60,TFT_BLUE);
+  sprite1.fillSprite(TFT_BLACK);
+  //sprite2.fillSprite(TFT_GREEN);
+  sprite1.drawString("Hello World",20,20,4);
+  sprite1.fillRect(10,100,60,60,TFT_RED);
+  sprite1.fillRect(80,100,60,60,TFT_GREEN);
+  sprite1.fillRect(150,100,60,60,TFT_BLUE);
  
- gfx->draw16bitRGBBitmap(0, 0, (uint16_t*)sprite1.getPointer(), 368, 448);
- //gfx->drawbitRGBBitmap(0, 68, (uint16_t*)sprite2.getPointer(), 368, 380);
- //gfx->fillRect(0,0,100,100,RED);
+  gfx->draw16bitRGBBitmap(0, 0, (uint16_t*)sprite1.getPointer(), 368, 448);
+  //gfx->drawbitRGBBitmap(0, 68, (uint16_t*)sprite2.getPointer(), 368, 380);
+  //gfx->fillRect(0,0,100,100,RED);
 }
 
 void memory()
